@@ -1,0 +1,624 @@
+@mixin bp-sm {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.info-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .title-info {
+    color: #5a6bec !important;
+    text-align: right;
+
+    .btn-info {
+      background-color: transparent;
+      color: #5a6bec;
+      border: 0 !important;
+      outline: 0 !important;
+
+      &:focus {
+        border: 0 !important;
+        outline: 0 !important;
+      }
+    }
+  }
+
+  .info-content {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    display: none;
+    width: 250px;
+    height: auto;
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #d2e4fe;
+    color: #232841;
+    text-align: justify;
+    line-height: 1.5;
+    z-index: 100;
+  }
+}
+
+
+.btn-info:hover + .info-content {
+  display: block !important;
+}
+
+.scrollbar {
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.scrollw::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #adbcd8;
+  border-radius: 10px;
+  padding-top: 2em;
+}
+
+.scrollw::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+  background-color: #000;
+  padding-top: 2em;
+}
+
+.scrollw::-webkit-scrollbar-thumb {
+  padding-top: 2em;
+  border-radius: 10px;
+  background-color: #abb2b2;
+}
+
+.scrollbar-v {
+  float: left;
+  width: 100%;
+}
+
+.scrollbar-v {
+  overflow-y: scroll;
+  margin-bottom: 25px;
+  overflow-x: hidden;
+}
+
+.scrollw-v::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #adbcd8;
+  border-radius: 10px;
+  padding-top: 2em;
+}
+
+.scrollw-v::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #adbcd8;
+  padding-top: 2em;
+}
+
+.scrollw-v::-webkit-scrollbar-thumb {
+  padding-top: 2em;
+  border-radius: 10px;
+  background-color: #abb2b2;
+}
+
+.active {
+  box-shadow: inset 4px 4px 5px #dae2e2, inset -5px -5px 8px #fff !important;
+  border-radius: 9px !important;
+  width: 100% !important;
+  position: relative !important;
+  float: right !important;
+  padding-right: 10px;
+}
+
+.active.fo-telegram-fill {
+  color: #058ff6 !important;
+}
+
+.active.fo-instagram-fill {
+  color: #f84c7e !important;
+}
+
+.active.fo-twitter-fill {
+  color: #6571ed !important;
+}
+
+p {
+  cursor: pointer;
+}
+
+///////////* Start Checkbox Style *///////////
+
+/* The container checkbox */
+.container-ch {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-ch input {
+  position: absolute;
+  opacity: 0;
+  right: -10px;
+  top: -11px !important;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -3px;
+  right: 12px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #ced0e3;
+  border-radius: 41%;
+  box-shadow: 4px 4px 5px #dae2e2, -5px -5px 8px #fff !important;
+  z-index: 1;
+}
+
+/* On mouse-over, add a grey background color */
+.container-ch:hover input ~ .checkmark {
+  border: 2px solid #5A6CEC;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-ch input:checked ~ .checkmark {
+  background-color: #5A6CEC;
+  border: 2px solid #5A6CEC;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-ch input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-ch .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.social-text {
+  color: #5a6bec;
+  font-weight: bold;
+}
+
+.packed-bubble-element {
+  height: 83% !important;
+}
+
+.show-switch {
+  top: 6.6rem;
+  left: 1rem;
+  z-index: 50;
+  align-items: center;
+
+  p {
+    font-size: .8rem;
+    color: #727576;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    margin-bottom: 0;
+    margin-top: 0 !important;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    right: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #5a6cec;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #5a6cec;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-13px);
+    -ms-transform: translateX(-13px);
+    transform: translateX(-13px);
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+#platform-sources-box {
+  .filters-title-box {
+    p {
+      background-color: transparent;
+      color: #83858f;
+    }
+  }
+
+  @media screen and (min-width: 10px) and (max-width: 800px) {
+    .info-box {
+      top: -20px;
+      right: 5px;
+    }
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1024px) {
+    .info-box {
+      top: -13px;
+      right: 5px;
+    }
+  }
+
+  header {
+    align-items: center;
+    padding-top: 10px;
+
+    h6 {
+      color: #292b34;
+    }
+
+    .filters-title-box {
+      width: fit-content;
+
+      p {
+        padding: 0 5px;
+        text-align: center;
+        color: #83858f;
+        height: 22px;
+        line-height: 22px;
+      }
+
+      p:last-child {
+        margin-left: 0 !important;
+      }
+
+      p:hover,
+      p:active,
+      p:focus {
+        color: #5a6cec !important;
+      }
+    }
+  }
+
+  .scroller-source-container {
+    max-height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .source-item {
+    padding: 1rem 0;
+    border-radius: .5rem;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    .source-icon {
+      top: 5px;
+      right: 5px;
+      color: #b2b6c9;
+    }
+
+    .source-body {
+      padding: .5rem .25rem .75rem;
+      border-bottom: 1px solid #dee0e4;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+
+      figcaption {
+        padding-top: .5rem;
+
+        p:first-child {
+          color: #292b34 !important;
+        }
+
+        p:last-child {
+          color: #83858f !important;
+        }
+      }
+    }
+
+    .source-footer {
+      p {
+        color: #292b34;
+      }
+
+      .ranc-progress {
+        height: 5px;
+        border-radius: 4px;
+        background-color: #e4edf1;
+        overflow: hidden;
+
+        .ranc-progress-bar {
+          width: 75%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #01d87b;
+        }
+      }
+    }
+  }
+
+  .mid-row {
+    .source-item {
+      .source-footer {
+        .ranc-progress {
+          .ranc-progress-bar {
+            width: 50%;
+            background-color: #ffb300;
+          }
+        }
+      }
+    }
+  }
+
+  .low-row {
+    .source-item {
+      .source-footer {
+        .ranc-progress {
+          .ranc-progress-bar {
+            width: 25%;
+            background-color: #ff5062;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .info-box {
+    top: -20px;
+    right: -30px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #platform-sources-box {
+    .source-item {
+      .source-body {
+        figcaption {
+          p:last-child {
+            font-size: .6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #platform-sources-box {
+    .source-item {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.filters-title-box-icon {
+  i {
+    cursor: pointer;
+    width: 30px !important;
+    font-size: 12px !important;
+    height: 30px;
+    line-height: 32px;
+    float: right !important;
+    color: #ccc;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px #dae2e2;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .info-box .title-info {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+
+  #platform-sources-box {
+    .container-fluid {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    header {
+      position: relative;
+      flex-direction: column;
+      z-index: 100;
+      margin-top: 0.8rem !important;
+
+      .filters-title-box {
+        display: none !important;
+      }
+
+      .filters-title-box-icon {
+        display: block !important;
+        margin-right: 0 !important;
+        margin-left: auto !important;
+        background-color: transparent;
+
+        button {
+          width: 1rem !important;
+          margin-right: 1rem !important;
+          padding: 0 !important;
+          color: gray !important;
+
+          &:first-child {
+            margin-right: 0 !important;
+          }
+
+          &:hover,
+          &:focus {
+            color: #5a6bec !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  #platform-sources-box {
+    .source-item {
+      .source-body {
+        figcaption {
+          p:last-child {
+            font-size: .6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+::ng-deep #packedBubbleElement {
+  .highcharts-point {
+    fill: #eee;
+  }
+
+
+
+  .highcharts-tooltip span {
+    background-color: #eee;
+    z-index: 9999 !important;
+    font-family: IRANSans !important;
+  }
+}
+
+::ng-deep {
+  .node-img {
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+
+    &.active {
+      &.telegram {
+        border: 2px solid #088ef5;
+      }
+
+      &.twitter {
+        border: 2px solid #7067ef;
+      }
+
+      &.instagram {
+        border: 2px solid #f6208b;
+      }
+    }
+  }
+
+  .bubble-tootltip-node {
+    text-align: right !important;
+    color: #fff !important;
+    background-color: #262a41 !important;
+    font-family: yekanMedium !important;
+  }
+
+  .highcharts-credits {
+    display: none !important;
+  }
+
+  .highcharts-point-select {
+    stroke: #64ff57;
+  }
+
+  .highcharts-label .fo-pic {
+    color: #fff;
+  }
+}
+
+.loading-packet-bubble {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 10px) and (max-width: 500px) {
+  .show-switch {
+    top: 5rem !important;
+    left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+  .show-switch {
+    top: 9rem !important;
+    left: 1rem !important;
+  }
+
+  .mt-respons {
+    margin-top: 5rem !important;
+  }
+}
