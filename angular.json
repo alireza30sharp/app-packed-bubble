@@ -79,9 +79,7 @@
               "styles.css"
             ],
             "scripts": [
-              "node_modules/highcharts/highcharts.js",
-              "node_modules/highcharts/modules/wordcloud.js",
-              "node_modules/highcharts/highcharts-more.js"
+             
 
             ],
             "assets": [
@@ -105,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "cli": {
+    "analytics": "687ed39d-ec6b-4860-954b-c771cad58d11"
+  }
 }
